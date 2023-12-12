@@ -1,0 +1,1051 @@
+/* 
+------- Table of Content -------
+====================================
+========== Common CSS ==========
+1) Reset CSS
+2) Top Bar Section
+3) Nav Bar Section
+4) Inner Page Heading
+5) Product Card
+6) Footer Section
+*/
+:root {
+    --primary-font: "Josefin Sans", sans-serif;
+    --secondary-font: "Roboto", sans-serif;
+    --text-color: #11161e;
+    --dark-hover-color: #151a32;
+    --light-color: #ffffff;
+    --dark-color: #000000;
+    --primary-color-light: #ff6f61;
+    --primary-color-dark: #ff5645;
+    --paragraph-color: #444444;
+    --bg-color-light: #f1f1f1;
+    --bg-color-dark: #f1f3f4;
+    --gray-color: #BDBDBD;
+}
+/*==================Reset Css Start===============*/
+body {
+    font-family: var(--primary-font);
+}
+p {
+    font-family: var(--secondary-font);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+span,
+small {
+    margin: 0;
+    padding: 0;
+}
+ol,
+ul {
+    list-style-type: none;
+}
+a,
+a:hover {
+    text-decoration: none;
+}
+a{
+    display: inline-block;
+}
+input:focus {
+    outline: 0;
+}
+.form-control:focus {
+    box-shadow: none;
+}
+/* ===============Reset Css End==============*/
+
+/*============= Common Css Start===============*/
+
+.product_box{
+    border: 1px solid var(--bg-color-dark);
+    background: var(--light-color);
+    position: relative;
+    overflow: hidden;
+}
+.product_box .product_item img{
+    width: 100%;
+}
+.product_box:hover{
+    opacity: 1;
+    visibility: visible;
+}
+.product_box .product_item{
+    position: relative;
+    overflow: hidden;
+}
+.product_box .product_item .product_hover{
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+}
+.product_box:hover .product_hover{
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.2);
+}
+.product_box .product_info{
+    padding: 24px 0;
+}
+.product_box .product_info ins{
+    text-decoration: none;
+    padding-right: 10px;
+}
+.product_box .product_info h5{
+    color: var(--paragraph-color);
+    line-height: 26px;
+}
+.product_box .product_info h5 del{
+    color: var(--gray-color);
+}
+.product_box .product_info h3{
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 28px;
+    padding: 5px 0 11px;
+    transition: .3s;
+    cursor: pointer;
+}
+.product_box .product_info h3:hover{
+    color: var(--primary-color-light);
+}
+.product_box .product_info i{
+    color: var(--primary-color-light);
+}
+.product_box .product_icon{
+    position: absolute;
+    top: 44px;
+    right: -50px;
+    transition: .5s;
+}
+.product_box:hover .product_icon{
+    right: 17px;
+}
+.product_box .product_icon li a,
+.product_box .product_icon li button{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    line-height: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: var(--light-color);
+    color: var(--dark-hover-color);
+    border: none;
+    transition: .5s;
+}
+.product_box .product_icon li a:hover,
+.product_box .product_icon li button:hover{
+    background-color: var(--primary-color-light);
+    color: var(--light-color);
+}
+.product_box .product_badge{
+    line-height: 26px;
+    padding: 9px 0;
+    position: absolute;
+    top: 0;
+    left: 24px;
+    background-color: var(--primary-color-light);
+    color: var(--light-color);
+    border-radius: 13px 13px 0 0;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+}
+
+/*=============Common Css End ============ */
+
+/* ===========Top Bar Css start =========== */
+
+#top_bar{
+    background: var(--dark-hover-color);
+    padding: 11px 0;
+}
+#top_bar .top_bar_left p i{
+    color: var(--primary-color-dark);
+    padding-right: 5px;
+}
+#top_bar .top_bar_left p{
+    color: var(--light-color);
+    line-height: 28px;
+}
+#top_bar .top_bar_left p span{
+    color: var(--primary-color-light);
+    line-height: 26px;
+}
+#top_bar .top_bar_right li select,
+#top_bar .top_bar_right li a{
+    border: none;
+    background: none;
+    color: var(--light-color);
+    cursor: pointer;
+    transition: .4s;
+}
+#top_bar .top_bar_right li select option{
+    color: var(--text-color);
+}
+#top_bar .top_bar_right .info li{
+    padding: 0 20px;
+    border-right: 1px solid var(--bg-color-dark);
+}
+#top_bar .top_bar_right .icon li a{
+    padding-left: 10px;
+    transition: .3s;
+}
+#top_bar .top_bar_right li select:hover,
+#top_bar .top_bar_right li a:hover{
+    color: var(--primary-color-dark);
+}
+/* ============ Top Bar Css End ================= */
+
+/* ===============Nav Bar Css start ===============*/
+
+#nav .nav_menu ul:first-child li a{
+    color: var(--text-color);
+    padding: 37px 15px;
+    line-height: 26px;
+    transition: .4s;
+}
+#nav .nav_menu ul:first-child li a:hover{
+    color: var(--primary-color-light);
+}
+#nav .nav_menu ul:first-child li a i{
+    font-size: 12px;
+}
+#nav .nav_icon li a,
+#nav .nav_icon li button{
+    border: none;
+    background: none;
+    color: var(--text-color);
+    font-size: 20px;
+    padding-left: 20px;
+    transition: .4s;
+}
+#nav .nav_icon li a:hover{
+    color: var(--primary-color-light);
+}
+#nav .nav_icon li button:hover{
+    color: var(--primary-color-light);
+}
+#nav .nav_icon .cart_open_btn span{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: inline-block;
+    font-size: 14px;
+    height: 17px;
+    width: 17px;
+    line-height: 18px;
+    border-radius: 50%;
+    background: var(--primary-color-dark);
+    color: var(--light-color);
+}
+
+/* ============= Nav Bar Css End============================ */
+
+/* ============== Main Css Start ========================*/
+
+/*=============== Hero Section Css start====================*/
+
+#hero .hero_box{
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+#hero .hero_box h6{
+    color: var(--light-color);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+}
+#hero .hero_box h2{
+    color: var(--light-color);
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 74px;
+    padding: 14px 0 16px;
+}
+#hero .hero_box p{
+    color: var(--light-color);
+    line-height: 28px;
+}
+#hero .hero_box a{
+    color: var(--light-color);
+    text-align: center;
+    font-weight: 600;
+    line-height: 28px;
+    margin: 40px 0;
+    background: var(--primary-color-light);
+    padding: 10px 30px;
+}
+#hero .hero_box_d{
+    background-size: cover;
+    background-position: center;
+    height: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+#hero .hero_box-d h6{
+    color: var(--dark-color);
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 28px;
+}
+#hero .hero_box_d h2{
+    color: var(--dark-color);
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 74px;
+    padding: 14px 0 16px;
+}
+#hero .hero_box_d p{
+    color: var(--dark-color);
+    line-height: 28px;
+}
+#hero .hero_box_d a{
+    color: var(--light-color);
+    text-align: center;
+    font-weight: 600;
+    line-height: 28px;
+    margin: 40px 0;
+    background: var(--dark-color);
+    padding: 10px 30px;
+}
+#hero ul.hero_slider_dots{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 12px;
+    bottom: 208px;
+}
+#hero ul.hero_slider_dots li {
+    line-height: 0;
+    margin-right: 5px;
+}
+#hero ul.hero_slider_dots li button {
+    border: none;
+    width: 10px;
+    height: 6px;
+    border-radius: 5px;
+    background-color: var(--light-color);
+    font-size: 0;
+    transition: .5s;
+}
+#hero ul.hero_slider_dots li.slick-active button {
+    width: 26px;
+    background-color: var(--primary-color-light);
+}
+#hero ul.hero_slider_dots li:nth-child(2).slick-active button {
+    width: 26px;
+    background-color: var(--dark-color);
+}
+
+/* ================ Hero Section Css End==========*/
+
+/* ============= Banner Section Css start =========== */
+
+#banner{
+    padding: 100px 0;
+}
+#banner .sm_1{
+    margin-bottom: 21px;
+}
+#banner .banner_item .overlay{
+    background-color: var(--text-color);
+    opacity: 0.5;
+    inset: 20px;
+    transform: scale(0);
+    transition: .5s;
+}
+#banner .banner_item:hover .overlay{
+    transform: scale(1);
+}
+#banner .overlay .overlay_item_info h3{
+    color: var(--light-color);
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 40px;
+    padding-bottom: 12px;
+    transition: .4s;
+}
+#banner .overlay .overlay_item_info a{
+    color: var(--light-color);
+    font-weight: 600;
+    line-height: 28px;
+    transition: .4s;
+    position: relative;
+}
+#banner .overlay .overlay_item_info > a::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: var(--primary-color-dark);
+    transition: .4s;
+}
+#banner .overlay .overlay_item_info > a:hover::after{
+    width: 100%;
+    right: 0;
+    color: var(--primary-color-dark);
+}
+#banner .banner_item .overlay_item_info h3 a:hover{
+    color: var(--primary-color-dark);
+}
+
+/* ============= Banner Section Css End ================*/
+
+/* ===============Product Section Css start ============*/
+
+#product{
+    padding-bottom: 100px;
+}
+#product .product_slider{
+    margin: 0 -12px;
+}
+#product .product_box{
+    margin: 0 12px;
+}
+#product .product_slider .product_slider_arrows{
+    padding: 17px 10px;
+    background-color: var(--paragraph-color);
+    font-size: 18px;
+    color: var(--light-color);
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+#product .product_slider .product_slider_arrows.fa-chevron-left{
+    left: 12px;
+} 
+#product .product_slider .product_slider_arrows.fa-chevron-right{
+    right: 12px;
+}
+
+/*===========Product Section Css End======================*/
+
+/* ============ Sell Product Section Css start=========== */
+
+#sell_product{
+    padding: 100px 0;
+}
+#sell_product .product_box{
+    margin-bottom: 24px;
+}
+#sell_product .sell_product_btn a{
+    color: var(--light-color);
+    font-weight: 600;
+    line-height: 28px;
+    padding: 13px 27px;
+    margin-top: 16px;
+    background-color: #ff6f61;
+}
+#sell_product .sell_product_btn a i{
+    padding-left: 10px;
+}
+
+/* ===============Sell Product Section Css End ================ */
+
+/*===========================Arrival Bar Css start============= */
+
+#arrival{
+    background-position: center;
+    background-size: cover;
+    padding: 110px;
+    position: relative;
+}
+#arrival h3{
+    color: var(--light-color);
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 46px; 
+}
+#arrival p{
+    color: var(--light-color);
+    line-height: 28px;
+    padding: 10px 0 30px 0;
+}
+#arrival a{
+    color: var(--light-color);
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30px;
+    background: none;
+    border: 1px solid var(--bg-color-light);
+    padding: 10px 30px;
+    transition: .4s;
+}
+#arrival a:hover{
+    background: var(--primary-color-light);
+    border: 1px solid var(--primary-color-light);
+}
+
+
+/*================= Arrival Bar Css End ===================*/
+
+/*================== Deals Days Section Css Start =============*/
+
+#deal_day{
+    position: relative;
+}
+#deal_day h2{
+    color: var(--text-color);
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 46px;
+}
+#deal_day .deal_day_box_slider{
+    background-color: var(--light-color);
+    padding: 120px 30px;
+    box-shadow: 0px 0px 70px 0px rgba(21, 26, 50, 0.08);
+    margin: 0 -12px;
+}
+#deal_day .deal_day_box_slider .deal_day_box_item{
+    padding: 50px;
+    background-position: center;
+    background-size: cover;
+    margin: 0 12px;
+}
+#deal_day .deal_day_box_item h4{
+    color: var(--text-color);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+}
+#deal_day .deal_day_box_item h3{
+    color: var(--text-color);
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 46px;
+    margin: 10px 0 16px;
+}
+#deal_day .deal_day_box_item p{
+    color: var(--paragraph-color);
+    line-height: 28px;
+}
+#deal_day .deal_day_box_item h5,
+#deal_day .deal_day_box_item h5 ins{
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    text-decoration: none;
+    margin: 19px 0 30px;
+}
+#deal_day .deal_day_box_item h5 del{
+    color: var(--paragraph-color);
+}
+#deal_day .deal_day_box_item a{
+    color: var(--light-color);
+    text-align: center;
+    font-weight: 600;
+    line-height: 28px;
+    padding: 13px 27px;
+    background-color: var(--dark-hover-color);
+    transition: .4s;
+}
+#deal_day .deal_day_box_item a:hover{
+    background-color: var(--primary-color-light);
+
+}
+#deal_day ul.deal_day_slider_dots{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 50%;
+    bottom: 60px;
+    transform: translateX(-50%);
+}
+#deal_day ul.deal_day_slider_dots li {
+    line-height: 0;
+    margin-right: 5px;
+}
+#deal_day ul.deal_day_slider_dots li button {
+    border: none;
+    width: 10px;
+    height: 6px;
+    border-radius: 5px;
+    background-color: var(--bg-color-dark);
+    font-size: 0;
+    transition: .5s;
+}
+#deal_day ul.deal_day_slider_dots li.slick-active button {
+    width: 26px;
+    background-color: var(--dark-color);
+}
+#deal_day .timer .timer_box{
+    margin-top: 34px;
+    background-color: var(--light-color);
+    box-shadow: 0px 0px 10px 0px rgba(21, 26, 50, 0.10);
+    border-radius: 50px;
+    z-index: 20;
+    transform: translateY(50%);
+}
+#deal_day .timer .timer_box ul{
+    padding: 16px 50px ;
+}
+#deal_day .timer .timer_box ul li{
+    padding-right: 32px;
+    margin-right: 18px;
+}
+#deal_day .timer .timer_box ul li:last-child{
+    padding-right: 0;
+}
+#deal_day .timer .timer_box ul li div{
+    color: var(--text-color);
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 34px;
+}
+#deal_day .timer .timer_box ul li span{
+    color: var(--paragraph-color);
+    text-align: center;
+    line-height: 26px;
+}
+#deal_day .timer .timer_box ul li::after{
+    content: ":";
+    position: absolute;
+    left: 60px;
+    font-size: 42px;
+    font-weight: 700;
+    display: inline-block;
+    top: 0;
+    color: var(--primary-color-light);
+}
+#deal_day .timer .timer_box ul li:last-child:after{
+    content: "";
+}
+#deal_day .timer .timer_box ul li:nth-child(2):after{
+    content: ":";
+    position: absolute;
+    left: 65px;
+}
+#deal_day .timer .timer_box ul li:nth-child(3):after{
+    content: ":";
+    position: absolute;
+    left: 80px;
+}
+
+/*================= Deals Days Section Css End ====================*/
+
+/* ============ Video Section Css start=================== */
+
+#video{
+    margin: 100px 0;
+}
+#video .video_info{
+    padding: 0 150px 0 0;
+}
+#video .video_info h6{
+    color: var(--paragraph-color);
+    line-height: 26px;
+}
+#video .video_info h3{
+    color: var(--text-color);
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 46px;
+    margin: 10px 0 16px;
+}
+#video .video_info p{
+    color: var(--paragraph-color);
+    line-height: 28px; 
+    margin-bottom: 30px;
+}
+#video .video_info a{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30px;
+    padding: 13px 27px;
+    color: var(--light-color);
+    background-color: var(--primary-color-light);
+}
+#video button{
+    position: absolute;
+    top: 42%;
+    left: 70%;
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    line-height: 85px;
+    font-size: 25px;
+    border: none;
+    color: var(--primary-color-light);
+    background-color: var(--light-color);
+    transition: .5s;
+    transform: translate(-50% -50%);
+}
+#video button:hover{
+    background-color: var(--primary-color-light);
+    color: var(--light-color);
+}
+
+/* ============ Video Section Css End ==================*/
+
+/*============= Latest News Section Css start============== */
+
+#latest_news{
+    margin-bottom: 100px;
+}
+#latest_news .latest_news_slider{
+    margin: 0 -12px;
+}
+#latest_news h2{
+    color: var(--text-color);
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 46px;
+    margin-bottom: 36px;
+}
+#latest_news .latest_news_slider .latest_news_box{
+    box-shadow: 0px 5px 30px 0px rgba(17, 22, 30, 0.08);
+    margin: 0 12px;
+    background-color: var(--light-color);
+}
+#latest_news .latest_news_box .latest_news_item img{
+    width: 100%;
+}
+#latest_news .latest_news_box .latest_news_item,
+#latest_news .latest_news_box .latest_news_info{
+    padding: 20px;
+}
+#latest_news .latest_news_box .latest_news_info h5{
+    color: var(--text-color);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    transition: .4s;
+    cursor: pointer;
+}
+#latest_news .latest_news_box .latest_news_info h5:hover{
+    color: var(--primary-color-light);
+}
+#latest_news .latest_news_box .latest_news_info p{
+    color: var(--paragraph-color);
+    line-height: 28px; 
+    padding: 2px 0 8px;
+}
+#latest_news .latest_news_box .latest_news_info a{
+    color: var(--paragraph-color);
+    font-weight: 600;
+    line-height: 28px;
+    transition: .4s;
+}
+#latest_news .latest_news_box .latest_news_info a:hover{
+    color: var(--primary-color-light);
+}
+#latest_news .latest_news_box .latest_news_info span{
+    color: var(--paragraph-color);
+    line-height: 26px;
+}
+#latest_news ul.latest_news_slider_dots{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 50%;
+    bottom: -40px;
+    transform: translateX(-50%);
+}
+#latest_news ul.latest_news_slider_dots li {
+    line-height: 0;
+    margin-right: 5px;
+}
+#latest_news ul.latest_news_slider_dots li button {
+    border: none;
+    width: 10px;
+    height: 6px;
+    border-radius: 5px;
+    background-color: var(--bg-color-dark);
+    font-size: 0;
+    transition: .5s;
+}
+#latest_news ul.latest_news_slider_dots li.slick-active button {
+    width: 26px;
+    background-color: var(--dark-color);
+}
+
+/*================ Latest News Section Css End ==============*/
+
+
+#help_line .main_box{
+    background: var(--light-color);
+    box-shadow: 0px 0px 50px 0px rgba(21, 26, 50, 0.10);
+    padding: 38px 38px;
+    transform: translateY(50%);
+}
+#help_line .help_box{
+    border-right: 4px solid var(--bg-color-dark);
+    padding: 12px 0 12px 30px;
+}
+#help_line .help_box:last-child{
+    border: none;
+}
+#help_line .help_icon{
+    width: 70px;
+    height: 70px;
+    line-height: 75px;
+    border-radius: 50%;
+    text-align: center;
+    margin-right: 10px;
+    background-color: var(--primary-color-light);
+    color: var(--light-color);
+    font-size: 35px;
+}
+
+/* ==========Main Css End ========== */
+/*================ Search Section Css start==============*/
+
+#search{
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 99999999;
+    transform: scale(0);
+    transition: .5s;
+}
+#search.open{
+    transform: scale(1);
+}
+#search form{
+    border: 3px solid var(--primary-color-light);
+    width: 50%;
+    border-radius: 50px;
+    padding: 15px 30px;
+}
+#search form input,
+#search form button,
+#search form input::placeholder{
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: var(--light-color);
+}
+#search .search_close_btn{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    background: none;
+    border: 1px solid var(--primary-color-light);
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    color: var(--primary-color-dark);
+    font-size: 20px;
+    transition: .5s;
+}
+#search .search_close_btn:hover{
+    background: var(--bg-color-light);
+    border: 1px solid var(--bg-color-light);
+    transform: rotate(180deg);
+}
+
+/* ============Search Section Css End =================*/
+/* ===============Cart Section Css Start================*/
+
+#cart{
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: .5s;
+}
+#cart.open{
+    transform: scaleX(1);
+}
+#cart .cart_aside{
+    background: var(--light-color);
+    padding: 30px 25px 0 30px;
+    height: 100vh;
+    overflow: scroll;
+}
+#cart .heading h2{
+    padding: 60px 0 15px 0;
+    border-bottom: 1px solid var(--bg-color-light);
+}
+#cart nav ul li{
+    padding: 15px 0;
+    border-bottom: 1px solid var(--bg-color-light);
+}
+#cart .cart_aside img{
+    width: 80px;
+}
+#cart .cart_info{
+    margin-left: 15px;
+    width: 150px;
+}
+#cart .cart_info a{
+    color: var(--text-color);
+    padding-bottom: 2px;
+    transition: .4s;
+}
+#cart .cart_info a:hover{
+    color: var(--primary-color-light);
+}
+#cart .cart_info p{
+    font-size: 14px;
+    color: var(--primary-color-light);
+}
+#cart ul li i{
+    padding-left: 130px;
+}
+#cart .cart_aside span{
+    font-size: 18px;
+    font-family: var(--secondary-font);
+    display: inline-block;
+    padding: 20px 0;
+}
+#cart .cart_aside .btns button{
+    padding: 15px 55px;
+    color: var(--light-color);
+    background: var(--primary-color-light);
+    transition: .5s;
+    border: none;
+    margin-bottom: 100px;
+}
+#cart .cart_aside .btns button:hover{
+    background: var(--dark-hover-color);
+}
+#cart .cart_aside .cart_close_btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid var(--dark-color);
+    border-radius: 50%;
+    background: none;
+    transition: .4s;
+    color: var(--dark-color);
+}
+#cart .cart_aside .cart_close_btn:hover{
+    background: var(--primary-color-light);
+    border: 1px solid var(--primary-color-light);
+    color: var(--light-color);
+    transform: rotate(180deg);
+}
+
+/* =================Cart Section Css End ====================*/
+
+/* =================Popup Section Css start============ */
+
+#popup{
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    z-index: 100000;
+}
+#popup .popup_info img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+#popup.open{
+    transform: scale(0);
+    transition: .3s linear;
+}
+#popup .popup_info{
+    width: 900px;
+    height: 500px;
+    background: var(--primary-color-light);
+}
+#popup .popup_info{
+    color: var(--light-color);
+}
+#popup .popup_info form{
+    margin: 0 125px;
+}
+#popup .popup_info form input{
+    width: 100%;
+    padding: 10px 35px 10px 20px;
+    font-family: var(--primary-font);
+    border: none;
+}
+#popup .popup_info form button{
+    margin-left: 10px;
+    padding: 10px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 30px;
+    border: none;
+    transition: .4s;
+    color: var(--light-color);
+    background: var(--dark-hover-color);
+}
+#popup .popup_info form button:hover{
+    background: var(--light-color);
+    color: var(--text-color);
+} 
+#popup .popup_info h2{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 46px; 
+    padding: 30px 358px 5px;
+    letter-spacing: 2px;
+    position: relative;
+}
+#popup .popup_info h2::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 25%;
+    height: 3px;
+    background: #f1f1f1;
+}
+#popup .popup_info p{
+    line-height: 28px;
+    padding: 15px 125px 33px;
+}
+#popup .popup_info .checkbox input{
+    z-index: 100;
+    padding: 5px;
+}
+#popup .popup_info .checkbox p{
+    padding-left: 10px;
+    line-height: 28px;
+    padding-top: 32px;
+}
+#popup .popup_close_btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    border: none;
+    background: none;
+    color: var(--light-color);
+    transition: .3s;
+    z-index: 20;
+}
+#popup .popup_close_btn:hover{
+    color: var(--dark-color);
+}
+
+/*==========================Popup Section Css End =========================*/
+
+
